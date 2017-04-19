@@ -19,10 +19,12 @@ ctx.lineWidth = 50;
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
+let hue = 0;  // 0 is red
 
 function draw(e) {
   if(!isDrawing) return; // stop the fn from running whne they are not moused down
   console.log(e);
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
   // start from
   ctx.moveTo(lastX, lastY);
