@@ -34,6 +34,11 @@ function draw(e) {
   // lastX = e.offsetX;
   // lastY = e.offsetY;
   [lastX, lastY] = [e.offsetX, e.offsetY];  // destructuring an array
+
+  hue++;
+  if(hue >= 360) {
+    hue = 0;
+  }
 }
 
 canvas.addEventListener('mousemove', draw);
